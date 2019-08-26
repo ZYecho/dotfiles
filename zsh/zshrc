@@ -1,0 +1,35 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+  export ZSH="/root/.oh-my-zsh"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="agnoster"
+
+plugins=(
+  git
+  autojump
+)
+
+source $ZSH/oh-my-zsh.sh
+
+alias cls='clear'
+alias ll='ls -l'
+alias la='ls -a'
+alias vi='vim'
+alias -s gz='tar -xzvf'
+alias -s tgz='tar -xzvf'
+
+
+# for go
+export GOROOT=/usr/local/go
+export GOPATH=~/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
